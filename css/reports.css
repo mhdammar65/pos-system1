@@ -1,0 +1,650 @@
+/* ==========================================================
+   REPORTS
+========================================================== */
+
+.report-filter {
+
+    background: #ffffff;
+
+    border: 1px solid #e7e1db;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: end;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.report-filter > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+
+.report-filter label {
+
+    font-size: 12px;
+
+    color: #777;
+
+}
+
+
+.report-filter input {
+
+    border: 1px solid #ddd5cd;
+
+    border-radius: 8px;
+
+    padding: 10px 12px;
+
+    outline: none;
+
+}
+
+
+.report-button {
+
+    border: none;
+
+    background: #624a35;
+
+    color: white;
+
+    padding: 11px 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+
+.report-button:hover {
+
+    background: #493525;
+
+}
+
+
+.report-button.secondary {
+
+    background: #f1eeeb;
+
+    color: #4e4035;
+
+}
+
+
+/* ==========================================================
+   STATS
+========================================================== */
+
+.report-statistics {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.report-stat {
+
+    background: #ffffff;
+
+    border: 1px solid #e7e1db;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+}
+
+
+.report-stat span {
+
+    display: block;
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.report-stat strong {
+
+    font-size: 23px;
+
+    color: #2e241e;
+
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.reports-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.report-panel {
+
+    background: #ffffff;
+
+    border: 1px solid #e7e1db;
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, .03);
+
+}
+
+
+.report-panel.wide {
+
+    grid-column: span 2;
+
+}
+
+
+.report-panel-header {
+
+    margin-bottom: 20px;
+
+}
+
+
+.report-panel-header h2 {
+
+    margin: 0 0 5px;
+
+    color: #30251e;
+
+    font-size: 18px;
+
+}
+
+
+.report-panel-header p {
+
+    margin: 0;
+
+    color: #999;
+
+    font-size: 13px;
+
+}
+
+
+/* ==========================================================
+   SALES BARS
+========================================================== */
+
+.sales-bars {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+}
+
+
+.sales-bar-row {
+
+    display: grid;
+
+    grid-template-columns:
+        75px 1fr 120px;
+
+    gap: 12px;
+
+    align-items: center;
+
+}
+
+
+.sales-bar-label {
+
+    font-size: 12px;
+
+    color: #777;
+
+}
+
+
+.sales-bar-track {
+
+    height: 12px;
+
+    background: #eee9e4;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.sales-bar-fill {
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #735236,
+            #b58a62
+        );
+
+    border-radius: 20px;
+
+}
+
+
+.sales-bar-value {
+
+    text-align: right;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================
+   PAYMENT
+========================================================== */
+
+.payment-report {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.payment-row-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+}
+
+
+.payment-row-top strong {
+
+    font-size: 13px;
+
+}
+
+
+.payment-row-top span {
+
+    font-size: 13px;
+
+    color: #655548;
+
+}
+
+
+.payment-track {
+
+    height: 9px;
+
+    background: #eee9e4;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.payment-fill {
+
+    height: 100%;
+
+    background: #735236;
+
+    border-radius: 20px;
+
+}
+
+
+.payment-row small {
+
+    display: block;
+
+    color: #999;
+
+    margin-top: 5px;
+
+}
+
+
+/* ==========================================================
+   CATEGORY
+========================================================== */
+
+.category-report {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.category-row > div:first-child {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+}
+
+
+.category-row strong {
+
+    font-size: 13px;
+
+}
+
+
+.category-row span {
+
+    font-size: 13px;
+
+    color: #655548;
+
+}
+
+
+.category-track {
+
+    height: 9px;
+
+    background: #eee9e4;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.category-fill {
+
+    height: 100%;
+
+    background: #a87951;
+
+    border-radius: 20px;
+
+}
+
+
+/* ==========================================================
+   BEST PRODUCTS
+========================================================== */
+
+.best-products {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.best-product-row {
+
+    display: grid;
+
+    grid-template-columns:
+        42px 1fr auto;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 13px 0;
+
+    border-bottom:
+        1px solid #eee;
+
+}
+
+
+.best-product-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.product-rank {
+
+    width: 32px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f1ebe5;
+
+    color: #654a34;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+
+}
+
+
+.best-product-name strong {
+
+    display: block;
+
+    font-size: 14px;
+
+}
+
+
+.best-product-name small {
+
+    display: block;
+
+    color: #999;
+
+    margin-top: 3px;
+
+}
+
+
+/* ==========================================================
+   EMPTY
+========================================================== */
+
+.report-empty {
+
+    padding: 35px;
+
+    text-align: center;
+
+    color: #999;
+
+}
+
+
+/* ==========================================================
+   PRINT
+========================================================== */
+
+@media print {
+
+    .sidebar,
+    .topbar,
+    .report-filter {
+
+        display: none !important;
+
+    }
+
+
+    .main {
+
+        margin: 0;
+
+        width: 100%;
+
+    }
+
+
+    .report-statistics {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+    }
+
+
+    .report-panel {
+
+        box-shadow: none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (
+    max-width: 900px
+) {
+
+    .report-statistics {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .reports-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .report-panel.wide {
+
+        grid-column: span 1;
+
+    }
+
+
+    .report-filter {
+
+        flex-wrap: wrap;
+
+    }
+
+}
+
+
+@media (
+    max-width: 600px
+) {
+
+    .report-statistics {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .report-filter {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .sales-bar-row {
+
+        grid-template-columns:
+            60px 1fr;
+
+    }
+
+
+    .sales-bar-value {
+
+        display: none;
+
+    }
+
+}

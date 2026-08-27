@@ -1,0 +1,467 @@
+/* ==========================================
+   CUSTOMERS
+========================================== */
+
+.customers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.customers-header h1 {
+    font-size: 25px;
+}
+
+.customers-header p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.new-customer-button {
+    border: none;
+    background: var(--primary);
+    color: white;
+    padding: 11px 16px;
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.new-customer-button:hover {
+    opacity: .9;
+}
+
+
+/* ==========================================
+   STATISTICS
+========================================== */
+
+.customer-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.customer-stat {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.customer-stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee7df;
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.customer-stat-icon.green {
+    background: #e6f3e8;
+    color: #388a48;
+}
+
+.customer-stat-icon.blue {
+    background: #e8f0f8;
+    color: #3571a8;
+}
+
+.customer-stat-icon.red {
+    background: #fae8e8;
+    color: #b94040;
+}
+
+.customer-stat span {
+    display: block;
+    color: var(--muted);
+    font-size: 9px;
+}
+
+.customer-stat strong {
+    display: block;
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   PANEL
+========================================== */
+
+.customers-panel {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.customers-toolbar {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.customer-search {
+    flex: 1;
+    height: 39px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 10px;
+}
+
+.customer-search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 10px;
+}
+
+.customers-toolbar select {
+    height: 39px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: white;
+    padding: 0 10px;
+    font-size: 9px;
+}
+
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.customers-table-wrapper {
+    overflow-x: auto;
+}
+
+.customers-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+}
+
+.customers-table th {
+    background: #faf8f5;
+    color: var(--muted);
+    font-size: 8px;
+    text-align: left;
+    padding: 12px 14px;
+}
+
+.customers-table td {
+    border-top: 1px solid #f0ece7;
+    padding: 13px 14px;
+    font-size: 10px;
+}
+
+.customer-name {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.customer-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #eee7df;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.customer-name strong {
+    display: block;
+    font-size: 10px;
+}
+
+.customer-name small {
+    display: block;
+    color: var(--muted);
+    margin-top: 2px;
+    font-size: 8px;
+}
+
+.customer-phone {
+    color: #4c4641;
+}
+
+.customer-email {
+    color: var(--muted);
+}
+
+.type-badge {
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 20px;
+    background: #f0ebe5;
+    color: var(--primary);
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.balance-normal {
+    color: #398347;
+    font-weight: 700;
+}
+
+.balance-due {
+    color: #bd3e3e;
+    font-weight: 800;
+}
+
+.customer-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.customer-action {
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 5px;
+    padding: 6px 8px;
+    cursor: pointer;
+    font-size: 8px;
+}
+
+.customer-action:hover {
+    background: #f7f3ef;
+}
+
+.customer-action.delete {
+    color: #b43838;
+}
+
+
+/* ==========================================
+   EMPTY
+========================================== */
+
+.customers-empty {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.customers-empty div {
+    font-size: 42px;
+}
+
+.customers-empty h3 {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.customers-empty p {
+    color: var(--muted);
+    font-size: 10px;
+    margin: 5px 0 15px;
+}
+
+.customers-empty button {
+    border: none;
+    background: var(--primary);
+    color: white;
+    padding: 9px 13px;
+    border-radius: 6px;
+    font-size: 9px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.customer-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(25, 18, 13, .6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    padding: 20px;
+}
+
+.customer-modal-overlay.show {
+    display: flex;
+}
+
+.customer-modal {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, .3);
+    overflow: hidden;
+}
+
+.customer-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.customer-modal-header h2 {
+    font-size: 17px;
+}
+
+.customer-modal-header p {
+    color: var(--muted);
+    font-size: 9px;
+    margin-top: 3px;
+}
+
+.close-customer-modal {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    background: #f5f1ed;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+#customerForm {
+    padding: 20px;
+}
+
+.customer-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 9px;
+    font-weight: 700;
+    color: #4d4640;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(121, 85, 58, .08);
+}
+
+
+/* ==========================================
+   FORM BUTTONS
+========================================== */
+
+.customer-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.customer-form-actions button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 9px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cancel-button {
+    border: 1px solid var(--border);
+    background: white;
+}
+
+.save-customer-button {
+    border: none;
+    background: var(--primary);
+    color: white;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .customer-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .customers-header {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .customer-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .customers-toolbar {
+        flex-direction: column;
+    }
+
+    .customer-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+}

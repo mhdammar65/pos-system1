@@ -1,0 +1,918 @@
+/* ==========================================================
+   SALES HISTORY
+========================================================== */
+
+.sales-statistics {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.sales-stat-card {
+
+    background: #ffffff;
+
+    border: 1px solid #e8e4df;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.04);
+
+}
+
+
+.sales-stat-card span {
+
+    display: block;
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.sales-stat-card strong {
+
+    font-size: 23px;
+
+    color: #2f241d;
+
+}
+
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.sales-container {
+
+    background: #ffffff;
+
+    border: 1px solid #e8e4df;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.04);
+
+}
+
+
+/* ==========================================================
+   TOOLBAR
+========================================================== */
+
+.sales-toolbar {
+
+    display: flex;
+
+    gap: 12px;
+
+    padding: 20px;
+
+    border-bottom:
+        1px solid #eee;
+
+}
+
+
+.sales-search {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex: 1;
+
+    background: #f8f7f5;
+
+    border:
+        1px solid #e4e0db;
+
+    border-radius: 9px;
+
+    padding:
+        0 12px;
+
+}
+
+
+.sales-search input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    padding: 11px 5px;
+
+    font-size: 14px;
+
+}
+
+
+.sales-toolbar select {
+
+    border:
+        1px solid #ddd6cf;
+
+    border-radius: 9px;
+
+    background: #fff;
+
+    padding:
+        10px 14px;
+
+    outline: none;
+
+    color: #333;
+
+}
+
+
+/* ==========================================================
+   TABLE
+========================================================== */
+
+.sales-table-wrapper {
+
+    overflow-x: auto;
+
+}
+
+
+.sales-table {
+
+    width: 100%;
+
+    border-collapse:
+        collapse;
+
+}
+
+
+.sales-table th {
+
+    background: #faf8f6;
+
+    color: #756c64;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .04em;
+
+    padding:
+        14px 18px;
+
+}
+
+
+.sales-table td {
+
+    padding:
+        16px 18px;
+
+    border-top:
+        1px solid #eee;
+
+    font-size: 14px;
+
+    color: #403831;
+
+}
+
+
+.sales-table tr:hover td {
+
+    background:
+        #fcfaf8;
+
+}
+
+
+.invoice-number {
+
+    color:
+        #7b4f2c;
+
+}
+
+
+.sale-time {
+
+    display: block;
+
+    color: #999;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+
+}
+
+
+.sale-phone {
+
+    display: block;
+
+    color: #888;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+
+}
+
+
+/* ==========================================================
+   PAYMENT
+========================================================== */
+
+.payment-badge {
+
+    display: inline-block;
+
+    background:
+        #f2eee9;
+
+    color:
+        #624b38;
+
+    border-radius:
+        20px;
+
+    padding:
+        5px 10px;
+
+    font-size:
+        12px;
+
+}
+
+
+/* ==========================================================
+   ACTIONS
+========================================================== */
+
+.sale-actions {
+
+    display: flex;
+
+    gap: 7px;
+
+}
+
+
+.sale-actions button {
+
+    border:
+        1px solid #ddd5cd;
+
+    background:
+        #fff;
+
+    color:
+        #624a35;
+
+    border-radius:
+        7px;
+
+    padding:
+        7px 10px;
+
+    cursor:
+        pointer;
+
+    font-size:
+        12px;
+
+}
+
+
+.sale-actions button:hover {
+
+    background:
+        #624a35;
+
+    color:
+        #fff;
+
+}
+
+
+/* ==========================================================
+   EMPTY
+========================================================== */
+
+.sales-empty {
+
+    text-align:
+        center;
+
+    padding:
+        70px 20px;
+
+}
+
+
+.sales-empty > div {
+
+    font-size:
+        42px;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.sales-empty h3 {
+
+    margin:
+        0 0 6px;
+
+    color:
+        #403831;
+
+}
+
+
+.sales-empty p {
+
+    margin:
+        0;
+
+    color:
+        #999;
+
+}
+
+
+/* ==========================================================
+   INVOICE MODAL
+========================================================== */
+
+.invoice-modal {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    background:
+        rgba(25, 20, 16, .55);
+
+    display:
+        none;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        20px;
+
+    z-index:
+        9999;
+
+}
+
+
+.invoice-modal.show {
+
+    display:
+        flex;
+
+}
+
+
+.invoice-modal-content {
+
+    background:
+        #fff;
+
+    width:
+        min(850px, 100%);
+
+    max-height:
+        92vh;
+
+    border-radius:
+        16px;
+
+    overflow:
+        hidden;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+}
+
+
+.invoice-modal-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    padding:
+        18px 22px;
+
+    border-bottom:
+        1px solid #eee;
+
+}
+
+
+.invoice-modal-header h2 {
+
+    margin:
+        0;
+
+}
+
+
+.invoice-modal-header button {
+
+    border:
+        none;
+
+    background:
+        #f2efec;
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    border-radius:
+        50%;
+
+    font-size:
+        22px;
+
+    cursor:
+        pointer;
+
+}
+
+
+.invoice-content {
+
+    overflow:
+        auto;
+
+    padding:
+        30px;
+
+}
+
+
+/* ==========================================================
+   INVOICE
+========================================================== */
+
+.invoice {
+
+    max-width:
+        760px;
+
+    margin:
+        auto;
+
+}
+
+
+.invoice-top {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        flex-start;
+
+    border-bottom:
+        2px solid #2e241e;
+
+    padding-bottom:
+        20px;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.invoice-top h1 {
+
+    margin:
+        0;
+
+    font-size:
+        26px;
+
+    color:
+        #2e241e;
+
+}
+
+
+.invoice-top p {
+
+    margin:
+        5px 0 0;
+
+    color:
+        #888;
+
+}
+
+
+.invoice-number-box {
+
+    text-align:
+        right;
+
+}
+
+
+.invoice-number-box span {
+
+    display:
+        block;
+
+    color:
+        #888;
+
+    font-size:
+        11px;
+
+}
+
+
+.invoice-number-box strong {
+
+    font-size:
+        16px;
+
+}
+
+
+.invoice-info {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        20px;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.invoice-info span {
+
+    display:
+        block;
+
+    color:
+        #888;
+
+    font-size:
+        11px;
+
+    margin-bottom:
+        5px;
+
+}
+
+
+.invoice-info strong {
+
+    display:
+        block;
+
+}
+
+
+.invoice-info small {
+
+    display:
+        block;
+
+    color:
+        #888;
+
+    margin-top:
+        3px;
+
+}
+
+
+.invoice-table {
+
+    width:
+        100%;
+
+    border-collapse:
+        collapse;
+
+}
+
+
+.invoice-table th {
+
+    background:
+        #f7f5f2;
+
+    text-align:
+        left;
+
+    padding:
+        12px;
+
+    font-size:
+        12px;
+
+}
+
+
+.invoice-table td {
+
+    padding:
+        12px;
+
+    border-bottom:
+        1px solid #eee;
+
+}
+
+
+.invoice-table td small {
+
+    display:
+        block;
+
+    color:
+        #999;
+
+    font-size:
+        10px;
+
+}
+
+
+.invoice-total-area {
+
+    width:
+        300px;
+
+    margin-left:
+        auto;
+
+    margin-top:
+        20px;
+
+}
+
+
+.invoice-total-area > div {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    padding:
+        7px 0;
+
+}
+
+
+.invoice-grand-total {
+
+    border-top:
+        2px solid #2e241e;
+
+    margin-top:
+        8px;
+
+    padding-top:
+        12px !important;
+
+    font-size:
+        19px;
+
+}
+
+
+.invoice-payment {
+
+    margin-top:
+        20px;
+
+    color:
+        #555;
+
+}
+
+
+.invoice-thank-you {
+
+    text-align:
+        center;
+
+    margin-top:
+        40px;
+
+    color:
+        #888;
+
+}
+
+
+/* ==========================================================
+   MODAL FOOTER
+========================================================== */
+
+.invoice-modal-footer {
+
+    display:
+        flex;
+
+    justify-content:
+        flex-end;
+
+    gap:
+        10px;
+
+    padding:
+        15px 20px;
+
+    border-top:
+        1px solid #eee;
+
+}
+
+
+.invoice-print-button {
+
+    background:
+        #624a35;
+
+    color:
+        white;
+
+    border:
+        none;
+
+    padding:
+        11px 18px;
+
+    border-radius:
+        8px;
+
+    cursor:
+        pointer;
+
+}
+
+
+.invoice-close-button {
+
+    background:
+        #f1efec;
+
+    color:
+        #444;
+
+    border:
+        none;
+
+    padding:
+        11px 18px;
+
+    border-radius:
+        8px;
+
+    cursor:
+        pointer;
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (
+    max-width: 900px
+) {
+
+    .sales-statistics {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (
+    max-width: 650px
+) {
+
+    .sales-statistics {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .sales-toolbar {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .invoice-info {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .invoice-top {
+
+        flex-direction:
+            column;
+
+        gap:
+            15px;
+
+    }
+
+
+    .invoice-number-box {
+
+        text-align:
+            left;
+
+    }
+
+}

@@ -1,0 +1,313 @@
+/* ==========================================================
+   SETTINGS
+========================================================== */
+
+.settings-page {
+
+    max-width: 950px;
+
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.settings-card {
+
+    background: #ffffff;
+
+    border: 1px solid #e7e1db;
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.03);
+
+}
+
+
+.settings-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 20px;
+
+    border-bottom:
+        1px solid #eee9e4;
+
+}
+
+
+.settings-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f3ede7;
+
+    border-radius: 12px;
+
+    font-size: 22px;
+
+}
+
+
+.settings-card-header h2 {
+
+    margin: 0 0 5px;
+
+    color: #30251e;
+
+    font-size: 18px;
+
+}
+
+
+.settings-card-header p {
+
+    margin: 0;
+
+    color: #999;
+
+    font-size: 13px;
+
+}
+
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.settings-form {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.settings-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.settings-field label {
+
+    color: #51463d;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.settings-field input,
+.settings-field select {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 13px;
+
+    border:
+        1px solid #ddd5ce;
+
+    border-radius: 9px;
+
+    background: #fff;
+
+    color: #333;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+.settings-field input:focus,
+.settings-field select:focus {
+
+    border-color:
+        #795638;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(121, 86, 56, .08);
+
+}
+
+
+.settings-field small {
+
+    color: #999;
+
+    font-size: 11px;
+
+}
+
+
+/* ==========================================================
+   ACTIONS
+========================================================== */
+
+.settings-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+}
+
+
+.settings-reset {
+
+    border:
+        1px solid #ddd5ce;
+
+    background: #fff;
+
+    color: #604d3b;
+
+    padding:
+        11px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+.settings-reset:hover {
+
+    background: #f7f3ef;
+
+}
+
+
+.settings-save {
+
+    border: none;
+
+    background: #624a35;
+
+    color: #fff;
+
+    padding:
+        11px 22px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+
+.settings-save:hover {
+
+    background: #493525;
+
+}
+
+
+/* ==========================================================
+   MESSAGE
+========================================================== */
+
+.settings-message {
+
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    text-align: right;
+
+    font-size: 13px;
+
+}
+
+
+.settings-message.success {
+
+    color: #287443;
+
+}
+
+
+.settings-message.error {
+
+    color: #a33a3a;
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (
+    max-width: 700px
+) {
+
+    .settings-form {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .settings-actions {
+
+        flex-direction:
+            column-reverse;
+
+    }
+
+
+    .settings-save,
+    .settings-reset {
+
+        width: 100%;
+
+    }
+
+}

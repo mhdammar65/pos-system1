@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Products | Wood & Curtain POS
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/products.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- ==================================================
+         SIDEBAR
+    =================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                W
+            </div>
+
+            <div class="brand-text">
+
+                <h2>
+                    Wood & Curtain
+                </h2>
+
+                <span>
+                    POS SYSTEM
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================
+             NAVIGATION
+        =================================================== -->
+
+        <nav class="navigation">
+
+
+            <a
+                href="../index.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▣
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="pos.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    🛒
+                </span>
+
+                <span>
+                    New Sale
+                </span>
+
+            </a>
+
+
+            <a
+                href="products.html"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+                    📦
+                </span>
+
+                <span>
+                    Products
+                </span>
+
+            </a>
+
+
+            <a
+                href="inventory.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    📊
+                </span>
+
+                <span>
+                    Inventory
+                </span>
+
+            </a>
+
+
+            <a
+                href="customers.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    👥
+                </span>
+
+                <span>
+                    Customers
+                </span>
+
+            </a>
+
+
+            <a
+                href="sales-history.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    🧾
+                </span>
+
+                <span>
+                    Sales History
+                </span>
+
+            </a>
+
+
+            <a
+                href="reports.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    📈
+                </span>
+
+                <span>
+                    Reports
+                </span>
+
+            </a>
+
+
+            <a
+                href="settings.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ⚙️
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- ==================================================
+             USER
+        =================================================== -->
+
+        <div class="sidebar-bottom">
+
+            <div class="user">
+
+                <div class="user-avatar">
+                    A
+                </div>
+
+                <div class="user-details">
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Administrator
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==================================================
+         MAIN
+    =================================================== -->
+
+    <main class="main">
+
+
+        <!-- ==================================================
+             HEADER
+        =================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+                <h1>
+                    Products
+                </h1>
+
+                <p>
+                    Manage your wooden poles, end cups, brackets and complete sets.
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button
+                    type="button"
+                    class="new-sale-button"
+                    id="addProductButton"
+                >
+
+                    + Add Product
+
+                </button>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ==================================================
+             PRODUCT STATISTICS
+        =================================================== -->
+
+        <section class="statistics">
+
+
+            <!-- TOTAL -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon products-icon">
+                    📦
+                </div>
+
+                <div class="stat-content">
+
+                    <span>
+                        Total Products
+                    </span>
+
+                    <h2 id="productTotal">
+                        0
+                    </h2>
+
+                    <small>
+                        Active products
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- WOODEN POLES -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon sales-icon">
+                    🪵
+                </div>
+
+                <div class="stat-content">
+
+                    <span>
+                        Wooden Poles
+                    </span>
+
+                    <h2 id="woodenPolesCount">
+                        0
+                    </h2>
+
+                    <small>
+                        Products
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- END CUPS -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon orders-icon">
+                    ⚪
+                </div>
+
+                <div class="stat-content">
+
+                    <span>
+                        End Cups
+                    </span>
+
+                    <h2 id="endCupsCount">
+                        0
+                    </h2>
+
+                    <small>
+                        Products
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- BRACKETS -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon stock-icon">
+                    🔩
+                </div>
+
+                <div class="stat-content">
+
+                    <span>
+                        Brackets
+                    </span>
+
+                    <h2 id="bracketsCount">
+                        0
+                    </h2>
+
+                    <small>
+                        Products
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             PRODUCT LIST
+        =================================================== -->
+
+        <section class="section">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h2>
+                        Product List
+                    </h2>
+
+                    <p>
+                        Add and manage your products.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 SEARCH + FILTER
+            =================================================== -->
+
+            <div class="product-controls">
+
+
+                <div class="search-box">
+
+                    <span>
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="productSearch"
+                        placeholder="Search product name, SKU or barcode..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+
+                <select
+                    id="productCategoryFilter"
+                    class="product-filter"
+                >
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+
+                    <option value="Wooden Poles">
+                        Wooden Poles
+                    </option>
+
+
+                    <option value="End Cups">
+                        End Cups
+                    </option>
+
+
+                    <option value="Brackets">
+                        Brackets
+                    </option>
+
+
+                    <option value="Wooden & Poles Full Set">
+                        Wooden &amp; Poles Full Set
+                    </option>
+
+
+                </select>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 PRODUCT TABLE
+            =================================================== -->
+
+            <div class="table-container">
+
+
+                <table class="products-table">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Product
+                            </th>
+
+                            <th>
+                                SKU
+                            </th>
+
+                            <th>
+                                Category
+                            </th>
+
+                            <th>
+                                Price
+                            </th>
+
+                            <th>
+                                Stock
+                            </th>
+
+                            <th>
+                                Unit
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody
+                        id="productsTableBody"
+                    >
+
+                    </tbody>
+
+
+                </table>
+
+
+
+                <!-- ==================================================
+                     EMPTY STATE
+                =================================================== -->
+
+                <div
+                    id="productsEmpty"
+                    class="empty-state"
+                >
+
+                    <div class="empty-icon">
+                        📦
+                    </div>
+
+                    <h3>
+                        No products yet
+                    </h3>
+
+                    <p>
+                        Add your first product to start using the POS.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="new-sale-button"
+                        id="emptyAddProductButton"
+                    >
+
+                        + Add Product
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     ADD / EDIT PRODUCT MODAL
+=================================================== -->
+
+<div
+    class="modal-overlay"
+    id="productModal"
+>
+
+
+    <div class="product-modal">
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+
+            <div>
+
+                <h2 id="productModalTitle">
+                    Add Product
+                </h2>
+
+                <p>
+                    Enter product information.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeProductModal"
+            >
+
+                ×
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- ==================================================
+             PRODUCT FORM
+        =================================================== -->
+
+        <form
+            id="productForm"
+        >
+
+
+            <!-- PRODUCT NAME -->
+
+            <div class="form-group">
+
+                <label>
+                    Product Name
+                </label>
+
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Example: 6ft Wooden Pole"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- SKU + BARCODE -->
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label>
+                        SKU
+                    </label>
+
+                    <input
+                        type="text"
+                        id="productSKU"
+                        placeholder="WP-001"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Barcode
+                    </label>
+
+                    <input
+                        type="text"
+                        id="productBarcode"
+                        placeholder="Optional"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CATEGORY -->
+
+            <div class="form-group">
+
+                <label>
+                    Category
+                </label>
+
+                <select
+                    id="productCategory"
+                    required
+                >
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+
+                    <option value="Wooden Poles">
+                        Wooden Poles
+                    </option>
+
+
+                    <option value="End Cups">
+                        End Cups
+                    </option>
+
+
+                    <option value="Brackets">
+                        Brackets
+                    </option>
+
+
+                    <option value="Wooden & Poles Full Set">
+                        Wooden &amp; Poles Full Set
+                    </option>
+
+
+                </select>
+
+            </div>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="form-group">
+
+                <label>
+                    Description
+                </label>
+
+                <textarea
+                    id="productDescription"
+                    rows="3"
+                    placeholder="Product description..."
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- SELLING PRICE + COST -->
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Selling Price (Rs.)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="productPrice"
+                        min="0"
+                        step="0.01"
+                        placeholder="0.00"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Cost Price (Rs.)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="productCost"
+                        min="0"
+                        step="0.01"
+                        placeholder="0.00"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- STOCK -->
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Current Stock
+                    </label>
+
+                    <input
+                        type="number"
+                        id="productStock"
+                        min="0"
+                        step="1"
+                        value="0"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Minimum Stock
+                    </label>
+
+                    <input
+                        type="number"
+                        id="productMinimumStock"
+                        min="0"
+                        step="1"
+                        value="5"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- UNIT -->
+
+            <div class="form-group">
+
+                <label>
+                    Unit
+                </label>
+
+                <select
+                    id="productUnit"
+                >
+
+                    <option value="Piece">
+                        Piece
+                    </option>
+
+
+                    <option value="Set">
+                        Set
+                    </option>
+
+
+                    <option value="Pair">
+                        Pair
+                    </option>
+
+
+                    <option value="Meter">
+                        Meter
+                    </option>
+
+
+                    <option value="Feet">
+                        Feet
+                    </option>
+
+
+                </select>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 MODAL ACTIONS
+            =================================================== -->
+
+            <div class="modal-actions">
+
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelProduct"
+                >
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="save-button"
+                >
+
+                    Save Product
+
+                </button>
+
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+=================================================== -->
+
+<script src="../js/storage.js"></script>
+
+<script src="../js/products.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Settings | Wood & Curtain POS
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/settings.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- ==========================================
+         SIDEBAR
+    =========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                W
+            </div>
+
+            <div class="brand-text">
+
+                <h2>
+                    Wood & Curtain
+                </h2>
+
+                <span>
+                    POS SYSTEM
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <button
+                class="nav-item"
+                onclick="location.href='../index.html'"
+            >
+                <span class="nav-icon">▣</span>
+                <span>Dashboard</span>
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="location.href='pos.html'"
+            >
+                <span class="nav-icon">🛒</span>
+                <span>New Sale</span>
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="location.href='products.html'"
+            >
+                <span class="nav-icon">📦</span>
+                <span>Products</span>
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="location.href='inventory.html'"
+            >
+                <span class="nav-icon">📊</span>
+                <span>Inventory</span>
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="location.href='customers.html'"
+            >
+                <span class="nav-icon">👥</span>
+                <span>Customers</span>
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="location.href='sales-history.html'"
+            >
+                <span class="nav-icon">🧾</span>
+                <span>Sales History</span>
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="location.href='reports.html'"
+            >
+                <span class="nav-icon">📈</span>
+                <span>Reports</span>
+            </button>
+
+
+            <button
+                class="nav-item active"
+            >
+                <span class="nav-icon">⚙️</span>
+                <span>Settings</span>
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="user">
+
+                <div class="user-avatar">
+                    A
+                </div>
+
+                <div class="user-details">
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Administrator
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         MAIN
+    =========================================== -->
+
+    <main class="main">
+
+
+        <header class="topbar">
+
+            <div class="page-title">
+
+                <h1>
+                    Settings
+                </h1>
+
+                <p>
+                    Manage your POS business settings.
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button
+                    class="new-sale-button"
+                    onclick="location.href='pos.html'"
+                >
+                    + New Sale
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ==========================================
+             SETTINGS
+        =========================================== -->
+
+        <section class="settings-page">
+
+
+            <!-- BUSINESS -->
+
+            <div class="settings-card">
+
+                <div class="settings-card-header">
+
+                    <div class="settings-icon">
+                        🏪
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Business Information
+                        </h2>
+
+                        <p>
+                            Information shown on your POS and invoices.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-form">
+
+
+                    <div class="settings-field">
+
+                        <label>
+                            Business Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="businessName"
+                            placeholder="Wood & Curtain"
+                        >
+
+                    </div>
+
+
+                    <div class="settings-field">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="businessPhone"
+                            placeholder="07XXXXXXXX"
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INVOICE -->
+
+            <div class="settings-card">
+
+                <div class="settings-card-header">
+
+                    <div class="settings-icon">
+                        🧾
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Invoice Settings
+                        </h2>
+
+                        <p>
+                            Configure how invoices are generated.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-form">
+
+
+                    <div class="settings-field">
+
+                        <label>
+                            Currency
+                        </label>
+
+                        <select
+                            id="currency"
+                        >
+
+                            <option value="Rs.">
+                                Rs. — Sri Lankan Rupee
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="settings-field">
+
+                        <label>
+                            Invoice Prefix
+                        </label>
+
+                        <input
+                            type="text"
+                            id="invoicePrefix"
+                            placeholder="INV"
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INVENTORY -->
+
+            <div class="settings-card">
+
+                <div class="settings-card-header">
+
+                    <div class="settings-icon">
+                        📦
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Inventory Settings
+                        </h2>
+
+                        <p>
+                            Configure your stock warning level.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-form">
+
+
+                    <div class="settings-field">
+
+                        <label>
+                            Default Low Stock Level
+                        </label>
+
+                        <input
+                            type="number"
+                            id="minimumStock"
+                            min="0"
+                            placeholder="5"
+                        >
+
+                        <small>
+                            Products at or below this quantity will show as low stock.
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SAVE -->
+
+            <div class="settings-actions">
+
+                <button
+                    id="resetSettings"
+                    class="settings-reset"
+                >
+                    Reset
+                </button>
+
+
+                <button
+                    id="saveSettings"
+                    class="settings-save"
+                >
+                    Save Settings
+                </button>
+
+            </div>
+
+
+            <div
+                id="settingsMessage"
+                class="settings-message"
+            >
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script
+    src="../js/settings.js"
+></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Sales History | Wood & Curtain POS
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/sales-history.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- ==========================================
+         SIDEBAR
+    =========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                W
+            </div>
+
+            <div class="brand-text">
+
+                <h2>
+                    Wood & Curtain
+                </h2>
+
+                <span>
+                    POS SYSTEM
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <button
+                class="nav-item"
+                onclick="location.href='../index.html'"
+            >
+                <span class="nav-icon">
+                    ▣
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="location.href='pos.html'"
+            >
+                <span class="nav-icon">
+                    🛒
+                </span>
+
+                <span>
+                    New Sale
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="location.href='products.html'"
+            >
+                <span class="nav-icon">
+                    📦
+                </span>
+
+                <span>
+                    Products
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="location.href='inventory.html'"
+            >
+                <span class="nav-icon">
+                    📊
+                </span>
+
+                <span>
+                    Inventory
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="location.href='customers.html'"
+            >
+                <span class="nav-icon">
+                    👥
+                </span>
+
+                <span>
+                    Customers
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item active"
+            >
+                <span class="nav-icon">
+                    🧾
+                </span>
+
+                <span>
+                    Sales History
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="location.href='reports.html'"
+            >
+                <span class="nav-icon">
+                    📈
+                </span>
+
+                <span>
+                    Reports
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="location.href='settings.html'"
+            >
+                <span class="nav-icon">
+                    ⚙️
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="user">
+
+                <div class="user-avatar">
+                    A
+                </div>
+
+                <div class="user-details">
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Administrator
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         MAIN
+    =========================================== -->
+
+    <main class="main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="page-title">
+
+                <h1>
+                    Sales History
+                </h1>
+
+                <p>
+                    View and manage your completed sales.
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button
+                    class="new-sale-button"
+                    onclick="location.href='pos.html'"
+                >
+                    + New Sale
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ==========================================
+             STATISTICS
+        =========================================== -->
+
+        <section class="sales-statistics">
+
+
+            <div class="sales-stat-card">
+
+                <span>
+                    Total Sales
+                </span>
+
+                <strong id="totalSales">
+                    Rs. 0.00
+                </strong>
+
+            </div>
+
+
+            <div class="sales-stat-card">
+
+                <span>
+                    Today's Sales
+                </span>
+
+                <strong id="todaySales">
+                    Rs. 0.00
+                </strong>
+
+            </div>
+
+
+            <div class="sales-stat-card">
+
+                <span>
+                    Today's Orders
+                </span>
+
+                <strong id="todayOrders">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="sales-stat-card">
+
+                <span>
+                    Average Order
+                </span>
+
+                <strong id="averageOrder">
+                    Rs. 0.00
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             FILTERS
+        =========================================== -->
+
+        <section class="sales-container">
+
+
+            <div class="sales-toolbar">
+
+
+                <div class="sales-search">
+
+                    <span>
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="salesSearch"
+                        placeholder="Search invoice or customer..."
+                    >
+
+                </div>
+
+
+                <select
+                    id="paymentFilter"
+                >
+
+                    <option value="all">
+                        All Payments
+                    </option>
+
+                    <option value="Cash">
+                        Cash
+                    </option>
+
+                    <option value="Card">
+                        Card
+                    </option>
+
+                    <option value="Bank">
+                        Bank Transfer
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="dateFilter"
+                >
+
+                    <option value="all">
+                        All Dates
+                    </option>
+
+                    <option value="today">
+                        Today
+                    </option>
+
+                    <option value="7">
+                        Last 7 Days
+                    </option>
+
+                    <option value="30">
+                        Last 30 Days
+                    </option>
+
+                </select>
+
+
+            </div>
+
+
+
+            <!-- ======================================
+                 TABLE
+            ======================================= -->
+
+            <div class="sales-table-wrapper">
+
+                <table class="sales-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Invoice
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Items
+                            </th>
+
+                            <th>
+                                Payment
+                            </th>
+
+                            <th>
+                                Total
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody
+                        id="salesTableBody"
+                    >
+
+                    </tbody>
+
+                </table>
+
+
+                <div
+                    class="sales-empty"
+                    id="salesEmpty"
+                >
+
+                    <div>
+                        🧾
+                    </div>
+
+                    <h3>
+                        No sales found
+                    </h3>
+
+                    <p>
+                        Completed sales will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- ==========================================
+     INVOICE MODAL
+=========================================== -->
+
+<div
+    class="invoice-modal"
+    id="invoiceModal"
+>
+
+    <div class="invoice-modal-content">
+
+
+        <div class="invoice-modal-header">
+
+            <h2>
+                Invoice
+            </h2>
+
+            <button
+                id="closeInvoiceModal"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            id="invoiceContent"
+            class="invoice-content"
+        >
+
+        </div>
+
+
+        <div class="invoice-modal-footer">
+
+            <button
+                class="invoice-print-button"
+                id="printInvoiceButton"
+            >
+                🖨 Print Invoice
+            </button>
+
+
+            <button
+                class="invoice-close-button"
+                id="invoiceDoneButton"
+            >
+                Close
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<script
+    src="../js/sales-history.js"
+></script>
+
+
+</body>
+
+</html>
